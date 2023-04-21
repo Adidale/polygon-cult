@@ -1,0 +1,26 @@
+.carousel-item {
+  height: 570px;
+}
+  
+.carousel-item img {
+  position: absolute;
+  object-fit:cover;
+  height: 570px
+}
+
+#btn-login {
+  margin-top: 0px;
+}
+
+@media (max-width: 992px) {
+  #btn-login {
+    margin-top: 10px;
+  }
+
+  #shopping-cart {
+    margin-left: 0px;
+    margin-right: 16px;
+    margin-top: 12px;
+    margin-bottom: 5px;
+  }
+}
