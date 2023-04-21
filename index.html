@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- TITLE -->
+    <title>Покупать 3D модели - Polygon Cult</title>
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/dropdown-cart.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+    
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark list-inline fixed-top" data-bs-theme="dark">
+        <div class="container-fluid col-11">
+            <!-- logo -->
+            <a class="navbar-brand fs-6 fw-bold" href="{{ url('/') }}" title="Главная">
+              <img src="./media/polygon-cult-logo-min.png" alt="Logo" width="45" height="45" class="mb-1">
+              Polygon Cult
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" fill="white"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#" title="Заказать 3D модел">Заказать</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="#" title="Для дизайнеров">Для дизайнеров</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle fw-semibold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Категории">
+                            Категории
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" title="Машины">Машины</a></li>
+                            <li><a class="dropdown-item" href="#" title="Самолёты">Самолёты</a></li>
+                            <li><a class="dropdown-item" href="#" title="Мебель">Мебель</a></li>
+                            <li><a class="dropdown-item" href="#" title="Космос">Космос</a></li>
+                            <li><a class="dropdown-item" href="#" title="Животные">Для 3D-принтера</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item fw-semibold" href="#" title="Ещё">Всё</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--search bar-->
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2 bg-dark" type="search" placeholder="Пойск" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+                <!-- shopping cart -->
+                <li class="nav-item dropdown">
+                    <button class="nav-link mx-3 btn btn-dark text-light" id="shopping-cart" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Корзина">
+                        <i class="bi bi-basket2-fill fs-5"></i>
+                        <span class="badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-lg-end" aria-labelledby="navbarDropdown" id="dropdown_menu">
+                        <ul class="list-group" id="dropdown_list">
+                            <li class="list-group-item">Корзина пустая :c</li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- account -->
+                <li class="nav-item">
+                    <a class="btn btn-outline-primary" id="btn-login" href="#">Войти</a>
+                </li>
+                <!-- language -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-light ms-3 my-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" title="Язык">
+                        <img src="./media/russian-flag-min.png" alt="Russian" width="35px" height="20px">
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" title="Spanish"><img class="me-2" src="./media/spain-flag-min.png" alt="Испанский" width="35px" height="20px">Español</a></li>
+                        <li><a class="dropdown-item" href="#" title="English"><img class="me-2" src="./media/uk-flag-min.png" alt="Англиский" width="35px" height="20px">English</a></li>
+                    </ul>
+                </li> -->
+            </div>
+        </div>
+    </nav>
+
+    <!--body-->
+    <div class="mt-5 pt-4">
+        <div id="carousel" class="carousel slide carousel-fade mb-5" data-bs-ride="carousel">
+            <div class="carousel-indicators pb-2">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./media/casita-min.png" class="d-block w-100" alt="house" data-bs-interval="3000">
+                    <div class="carousel-caption d-none d-md-block bg-dark rounded-pill bg-opacity-50">
+                        <h5>Добро пожаловать в Polygon Cult!</h5>
+                        <p>Render by: Adidale</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./media/mustang65-1-min.png" class="d-block w-100" alt="mustang" data-bs-interval="3000">
+                    <div class="carousel-caption d-none d-md-block bg-dark rounded-pill bg-opacity-50">
+                        <h5>Покупайте 3D-модели для всех ваших проектов.</h5>
+                        <p>Render by: Adidale</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./media/torii-3-min.png" class="d-block w-100" alt="torii" data-bs-interval="3000">
+                    <div class="carousel-caption d-none d-md-block bg-dark rounded-pill bg-opacity-50">
+                        <h5>Загрузите свои модели и начните зарабатывать.</h5>
+                        <p>Render by: Adidale</p>
+                    </div>
+                 </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+          
+        <!-- Order 3D models --> 
+        <section class="text-center my-5 pt-3 d-flex justify-content-center align-items-center row">
+            <h2 class="row my-5 d-flex justify-content-center">Готовые 3D модели</h2>
+            <div class="container row d-flex justify-content-center align-items-center">
+                <div class="col-md-5 my-5">
+                    <h3>Покупайте 3D модели</h3>
+                    <p class="fs-5">для видеоигр, архитектурных проектов, фриланс, 3D-печати и много другого.</p>
+                </div>
+                <div class="col-md-5 my-5">
+                    <img src="./media/svetjekolem-GozYYst1kag-unsplash-min.jpg" class="img-fluid rounded-4" alt="car">
+                </div>
+            </div>
+              
+            <div class="row container d-flex justify-content-center align-items-center">
+                <div class="col-md-5 my-5">
+                    <img src="./media/low_poly_building_12_4x-min.png" class="img-fluid rounded-4" alt="house">
+                </div>
+                <div class="col-md-5 my-5">
+                    <h3>Заказывайте 3D модели</h3>
+                    <p class="fs-5">Хотите что-то сложное? Всё в порядке, мы позаботимся об этом, независимо от того, сколько моделей вы хотите.</p>
+                </div>
+            </div>
+        </section>
+            
+        <!-- Join us -->
+            
+        <section class="text-center mt-5 d-flex justify-content-center align-items-center row bg-dark text-white">
+            <h2 class="my-5 d-flex justify-content-center">Зарабатывайте с нами</h2>
+            <div class="row container d-flex justify-content-center align-items-center">
+                <div class="col-md-5 my-5">
+                        <img src="./media/honguitos-2-min.png" class="img-fluid rounded-4" alt="mushrooms">
+                </div>
+                <div class="col-md-5 my-5">
+                        <p class="fs-5">Загрузите свои модели и зарабатываете до 85% на royalities.</p>
+                </div>
+            </div>
+            <div class="row container d-flex justify-content-center align-items-center">
+                <div class="col-md-5 my-5">
+                        <p class="fs-5">Выставляйте свои лучшие рендеры, получайте отзывы и признание.</p>
+                </div>
+                <div class="col-md-5 my-5">
+                    <img src="./media/create-more-min.jpg" class="img-fluid rounded-4" alt="create more">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!--footer-->
+    <footer class="mt-auto">
+        <div class="p-0 m-0 container-fluid bg-secondary row bg-opacity-50 text-center">
+          <div class="col text-center fw-semibold">
+            <div class="my-2"><a class="text-dark text-decoration-none" href="#">Пользовательское соглашение</a></div>
+            <div class="my-2"><a class="text-dark text-decoration-none" href="#">Политика конфиденциальности</a></div>
+          </div>
+          <div class="col text-center fw-semibold">
+            <div class="my-2"><a class="text-dark text-decoration-none" href="#">Написать нам</a></div>
+            <div class="my-2"><a class="text-dark text-decoration-none" href="#">Присоединяйтесь к сообществу</a></div>
+          </div>
+          <p>&copy; Polygon Cult 2023</p>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
