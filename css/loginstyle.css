@@ -61,10 +61,10 @@ img{
 .author {
     position: absolute;
     top: 96%;
-    left: 80%;
+    left: 72%;
     transform: translate(-18%, -20%);
     color: #fff;
-    width: 100PX;
+    width: 150PX;
 }
 
 .author p{
@@ -186,10 +186,10 @@ span a:hover{
     .author {
         position: absolute;
         top: 96%;
-        left: 87%;
+        left: 80%;
         transform: translate(-45%, -50%);
         color: #fff;
-        width: 100px;
+        width: 150px;
     }
     
     .row{
